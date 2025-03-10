@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'g++ hell.cpp -o PES1UG22AM920-1'
+                sh 'g++ hell.cpp -o PES1UG22AM920-1 --invalid-flag'
                 echo 'Build Stage Successful'
             }
         }
