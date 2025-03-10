@@ -11,6 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './PES1UG22AM920'
+                sh 'chmod +x PES1UG22AM920-1'
                 echo 'Test Stage Successful'
             }
         }
