@@ -4,20 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o PES1UG22AM920-1 hell.cpp'
+                sh 'g++ hell.cpp -o PES1UG22AM920-1'
                 echo 'Build Stage Successful'
             }
         }
         stage('Test') {
             steps {
-                sh './PES1UG22AM920'
-                sh 'chmod +x PES1UG22AM920-1'
+                sh './PES1UG22AM920-1'
                 echo 'Test Stage Successful'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deployment Successful'
+                echo 'Deploy Stage Successful'
             }
         }
     }
